@@ -1,23 +1,38 @@
 {% extends "base.html" %}
 
+{% block title %}<title>Dish Types</title>{% endblock %}
+
+
 {% block content %}
-  <h1>
-    Dish Type list
-    <a href="{% url 'kitchen:dish-types-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a>
-  </h1>
-  {% if dish_type_list %}
-    <ul>
-      {% for dish_type in dish_type_list %}
-        <li>
-          <a href="{% url "kitchen:dish-types-detail" pk=dish_type.id %} ">{{ dish_type.id }}</a>
-          {{ dish_type.name }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>There are no dish types in menu</p>
-  {% endif %}
+
+<div class="container py-5">
+  <h2 class="mb-4">Dish Types</h2>
+  <div class="table-responsive modern-table">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Dish Types</th>
+          <th>Dishes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for dish_type in dish_type_list %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td><strong>{{ dish_type.name }}</strong></td>
+          <td>
+            {% for dish in dish_type.dishes.all %}
+              <a href="{% url 'kitchen:dish-detail' pk=dish.id %}"><span class="badge">{{ dish.name }}</span></a>
+            {% empty %}
+              <em>No dishes</em>
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 
 {% endblock %}

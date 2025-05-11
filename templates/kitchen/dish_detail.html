@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}<title>{{ dish.name }}</title>{% endblock %}
+
+{% block content %}
+
+  <div class="b-example-divider"></div>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6"><img src="{{ dish.image_url }}"
+                                                 class="card-img-top img-fluid"
+                                                 style="height: 30vh; object-fit: cover; border-radius: 15px;"
+                                                 alt="{{ dish.name }}"></div>
+      <div class="col-lg-6"><h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ dish.name }}</h1>
+        <p class="lead">{{ dish.description }}</p>
+        <p class="lead"><strong>Dish type:</strong> {{ dish.dish_type }}</p>
+        <p class="lead"><strong>Price:</strong> {{ dish.price }}$</p>
+        <p class="lead"><strong>Cook: </strong>
+          {% for cook in dish.cooks.all %}
+            {{ cook.first_name }} {{ cook.last_name }}{% if not forloop.last %}, {% endif %}
+          {% empty %}
+            None
+          {% endfor %}
+        </p>
+        <p class="lead"><strong>Ingredients: </strong>
+          {% for ingredient in dish.ingredients.all %}
+            {{ ingredient.name }}{% if not forloop.last %}, {% endif %}
+          {% empty %}
+            None
+          {% endfor %}
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

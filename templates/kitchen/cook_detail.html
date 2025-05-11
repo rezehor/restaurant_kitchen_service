@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}<title>{{ cook.first_name }} {{ cook.last_name }}</title>{% endblock %}
+
+{% block content %}
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">{{ cook.first_name }} {{ cook.last_name }}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4"><strong>Username: </strong>{{ cook.username }}</p>
+      <p class="lead mb-4"><strong>Full name: </strong>{{ cook.first_name }} {{ cook.last_name }}</p>
+      <p class="lead mb-4"><strong>Years of experience: </strong>{{ cook.years_of_experience }}</p>
+      <p class="lead mb-4"><strong>Email: </strong>{{ cook.email }}</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+      </div>
+    </div>
+  </div>
+
+<div class="container px-4 py-5" id="icon-grid">
+  <h2 class="pb-2 border-bottom">Dishes: {{ cook.dishes.count }}</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+    {% for dish in cook.dishes.all %}
+      <div class="col">
+        <div class="dish-card p-3 h-100 border rounded shadow-sm transition">
+          <a href="{% url 'kitchen:dish-detail' pk=dish.id %}" class="text-decoration-none text-dark">
+            <h3 class="lead fw-bold fs-4 mb-2">{{ dish.name }}</h3>
+            <p class="lead mb-0">{{ dish.description }}</p>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

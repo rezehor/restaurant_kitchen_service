@@ -1,22 +1,38 @@
 {% extends "base.html" %}
 
+{% block title %}<title>Ingredients</title>{% endblock %}
+
+
 {% block content %}
-  <h1>
-    Ingredient list
-    <a href="{% url 'kitchen:ingredient-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a>
-  </h1>
-  {% if ingredient_list %}
-    <ul>
-      {% for ingredient in ingredient_list %}
-        <li>
-          {{ ingredient.id }} {{ ingredient.name }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>There are no ingredients in kitchen</p>
-  {% endif %}
+<div class="container py-5">
+  <h2 class="mb-4">Ingredients and Their Dishes</h2>
+  <div class="table-responsive modern-table">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Ingredient</th>
+          <th>Used in Dishes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ingredient in ingredient_list %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td><strong>{{ ingredient.name }}</strong></td>
+          <td>
+            {% for dish in ingredient.dishes.all %}
+              <span class="badge">{{ dish.name }}</span>
+            {% empty %}
+              <em>No dishes</em>
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
 {% endblock %}

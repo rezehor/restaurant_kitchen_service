@@ -1,23 +1,37 @@
 {% extends "base.html" %}
 
+{% block title %}<title>Cooks</title>{% endblock %}
+
+
 {% block content %}
-  <h1>
-    Cook list
-    <a href="{% url 'kitchen:cook-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a>
-  </h1>
-  {% if cook_list %}
-    <ul>
-      {% for cook in cook_list %}
-        <li>
-          <a href="{% url "kitchen:cook-detail" pk=cook.id %} ">{{ cook.id }}</a>
-          {{ cook.username }} ({{ cook.first_name }} {{ cook.last_name }}) {{ cook.years_of_experience }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>There are no cooks in kitchen</p>
-  {% endif %}
+  <div class="container py-5">
+    <h2 class="mb-4">Cooks</h2>
+    <div class="table-responsive modern-table">
+      <table class="table mb-0">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>Username</th>
+          <th>Name</th>
+          <th>Last name</th>
+          <th>Years of experience</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cook in cook_list %}
+          {% if "admin" not in cook.username %}
+            <tr>
+              <td>{{ cook.id }}</td>
+              <td><a href="{% url 'kitchen:cook-detail' pk=cook.id %}" rel="{{ cook.id }}">{{ cook.username }}</a></td>
+              <td>{{ cook.first_name }}</td>
+              <td>{{ cook.last_name }}</td>
+              <td>{{ cook.years_of_experience }}</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 {% endblock %}

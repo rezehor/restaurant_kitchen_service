@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 
-{% block content %}
-  <h1>
-    Dish list
-    <a href="{% url 'kitchen:dish-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a>
-  </h1>
-  {% if dish_list %}
-    <ul>
-      {% for dish in dish_list %}
-        <li>
-          <a href="{% url "kitchen:dish-detail" pk=dish.id %} ">{{ dish.id }}</a>
-          {{ dish.name }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>There are no dishes in menu</p>
-  {% endif %}
+{% block title %}<title>Dishes</title>{% endblock %}
 
+{% block content %}
+  <div class="container mt-4">
+    <h1>Dishes</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for dish in dish_list %}
+        <div class="col">
+          <div class="card h-100">
+            {% if dish.image_url %}
+              <a href="{% url 'kitchen:dish-detail' dish.id %}"><img src="{{ dish.image_url }}"
+                                                                     class="card-img-top img-fluid"
+                                                                     style="height: 280px; object-fit: cover;"
+                                                                     alt="{{ dish.name }}"></a>
+
+            {% endif %}
+            <div class="card-body">
+              <h4 class="card-title">{{ dish.name }}</h4>
+              <p class="card-text">{{ dish.description|truncatewords:30 }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}

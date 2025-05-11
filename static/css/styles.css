@@ -1,0 +1,58 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.modern-table {
+    background-color: #fffaf5;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.modern-table thead {
+    background-color: #f5e9da;
+}
+
+.modern-table th,
+.modern-table td {
+    padding: 1.2rem;
+    vertical-align: middle;
+}
+
+.modern-table .badge {
+    background-color: #e7d5bd;
+    color: #5a4a3c;
+    margin: 0.2rem;
+    font-size: 0.95rem;
+    border-radius: 0.5rem;
+    padding: 0.5em 0.75em;
+}
+
+.btn-beige {
+    background-color: #f5e9da;
+    color: #5a4a3c;
+    border: none;
+}
+
+.btn-beige:hover {
+    background-color: #e7d5bd;
+    color: #3b312a;
+}
+
+.card-img-top {
+    border-radius: 0.5rem;
+}
+
+.dish-card {
+    transition: all 0.3s ease;
+}
+
+.dish-card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px);
+}
