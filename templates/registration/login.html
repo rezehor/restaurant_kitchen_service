@@ -1,14 +1,10 @@
 {% extends "kitchen/index.html" %}
 
+{% block title %}<title>Sign in - Kitchen Service</title>{% endblock %}
+
+{% load static %}
 
 {% block login %}
-  <head>
-    {% block title %}<title>Sign in - Kitchen Service</title>{% endblock %}
-    {% load static %}
-    <link href="{% static 'css/sign-in.css' %}" rel="stylesheet"/>
-
-  </head>
-  <body class="text-center">
   <main class="form-signin w-100 m-auto">
     <form method="post">
       {% csrf_token %}
@@ -19,13 +15,12 @@
         <label for="floatingInput">Username</label>
       </div>
       <div class="form-floating mb-2">
-        <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"
-               required>
+        <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
         <label for="floatingPassword">Password</label>
       </div>
 
       <button class="btn btn-lg btn-light fw-bold border-white bg-white w-100" type="submit">Sign in</button>
     </form>
   </main>
-  </body>
 {% endblock %}
+
