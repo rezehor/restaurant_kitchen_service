@@ -2,32 +2,43 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 
-from kitchen.models import DishType
+from kitchen.models import Dish, DishType
 
-DISH_TYPE_URL = reverse("kitchen:dish-types-list")
+DISH_URL = reverse("kitchen:dish-list")
 
-class PublicDishTypeTest(TestCase):
+class PublicDishTest(TestCase):
     def test_login_required(self):
-        res = self.client.get(DISH_TYPE_URL)
+        res = self.client.get(DISH_URL)
         self.assertNotEqual(res.status_code, 200)
 
 
-class PrivateDishTypeTest(TestCase):
+class PrivateDishTest(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
-            username="testuser",
-            password="<PASSWORD>",
+            username="test_user",
+            password="test12345",
         )
         self.client.force_login(self.user)
 
-    def test_retrieve_dish_type(self):
-        DishType.objects.create(name="Breakfast")
-        DishType.objects.create(name="Dessert")
-        response = self.client.get(DISH_TYPE_URL)
-        self.assertEqual(response.status_code, 200)
-        dish_type = DishType.objects.all()
-        self.assertEqual(
-            list(response.context["dish_type_list"]),
-            list(dish_type),
+    def test_retrieve_dish(self):
+        dish_type = DishType.objects.create(name="Main Course")
+        Dish.objects.create(
+            name="BBQ Ribs",
+            description="Slow-cooked pork ribs glazed with smoky barbecue sauce.",
+            price=10,
+            dish_type=dish_type,
         )
-        self.assertTemplateUsed(response, "kitchen/dish_type_list.html")
+        Dish.objects.create(
+            name="Beef Stroganoff",
+            description="Tender beef slices in a creamy mushroom sauce served over noodles.",
+            price=15,
+            dish_type=dish_type,
+        )
+        response = self.client.get(DISH_URL)
+        self.assertEqual(response.status_code, 200)
+        dish = Dish.objects.all()
+        self.assertEqual(
+            list(response.context["dish_list"]),
+            list(dish),
+        )
+        self.assertTemplateUsed(response, "kitchen/dish_list.html")

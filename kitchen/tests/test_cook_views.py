@@ -2,43 +2,35 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 
-from kitchen.models import Dish, DishType
+COOK_URL = reverse("kitchen:cook-list")
 
-DISH_URL = reverse("kitchen:dish-list")
-
-class PublicDishTest(TestCase):
+class PublicCookTest(TestCase):
     def test_login_required(self):
-        res = self.client.get(DISH_URL)
+        res = self.client.get(COOK_URL)
         self.assertNotEqual(res.status_code, 200)
 
 
-class PrivateDishTest(TestCase):
+class PrivateCookTest(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
             username="test_user",
-            password="<PASSWORD>",
+            password="test12345",
         )
         self.client.force_login(self.user)
 
-    def test_retrieve_dish(self):
-        dish_type = DishType.objects.create(name="Main Course")
-        Dish.objects.create(
-            name="BBQ Ribs",
-            description="Slow-cooked pork ribs glazed with smoky barbecue sauce.",
-            price=10,
-            dish_type=dish_type,
-        )
-        Dish.objects.create(
-            name="Beef Stroganoff",
-            description="Tender beef slices in a creamy mushroom sauce served over noodles.",
-            price=15,
-            dish_type=dish_type,
-        )
-        response = self.client.get(DISH_URL)
-        self.assertEqual(response.status_code, 200)
-        dish = Dish.objects.all()
-        self.assertEqual(
-            list(response.context["dish_list"]),
-            list(dish),
-        )
-        self.assertTemplateUsed(response, "kitchen/dish_list.html")
+
+    def test_create_cook(self):
+        form_data = {
+            "username": "new_user",
+            "password1": "test12345",
+            "password2": "test12345",
+            "first_name": "new_first_name",
+            "last_name": "new_last_name",
+            "years_of_experience": 5,
+        }
+        self.client.post(reverse("kitchen:cook-create"), data=form_data)
+        new_user = get_user_model().objects.get(username=form_data["username"])
+
+        self.assertEqual(new_user.first_name, form_data["first_name"])
+        self.assertEqual(new_user.last_name, form_data["last_name"])
+        self.assertEqual(new_user.years_of_experience, form_data["years_of_experience"])

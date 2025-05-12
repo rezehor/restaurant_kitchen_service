@@ -15,8 +15,8 @@ class PublicDishTypeTest(TestCase):
 class PrivateDishTypeTest(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
-            username="testuser",
-            password="<PASSWORD>",
+            username="test_user",
+            password="test12345",
         )
         self.client.force_login(self.user)
 
