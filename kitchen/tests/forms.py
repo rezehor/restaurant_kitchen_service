@@ -28,7 +28,7 @@ class SearchFormTests(TestCase):
         dish_type = DishType.objects.create(name="Main Course")
         Dish.objects.create(
             name="BBQ Ribs",
-            description="Slow-cooked pork ribs glazed with smoky barbecue sauce.",
+            description="Slow-cooked pork ribs glazed with barbecue sauce.",
             price=10,
             dish_type=dish_type,
         )

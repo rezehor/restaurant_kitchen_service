@@ -11,26 +11,27 @@
       <p class="lead mb-4"><strong>Years of experience: </strong>{{ cook.years_of_experience }}</p>
       <p class="lead mb-4"><strong>Email: </strong>{{ cook.email }}</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="{% url 'kitchen:cook-update' pk=cook.id %}" class="btn btn-outline-secondary btn-lg px-4 gap-4">Update</a>
+        <a href="{% url 'kitchen:cook-update' pk=cook.id %}"
+           class="btn btn-outline-secondary btn-lg px-4 gap-4">Update</a>
         <a href="{% url 'kitchen:cook-delete' pk=cook.id %}" class="btn btn-danger btn-lg px-4">Delete</a>
       </div>
     </div>
   </div>
 
-<div class="container px-4 py-5" id="icon-grid">
-  <h2 class="pb-2 border-bottom">Dishes: {{ cook.dishes.count }}</h2>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-    {% for dish in cook.dishes.all %}
-      <div class="col">
-        <div class="dish-card p-3 h-100 border rounded shadow-sm transition">
-          <a href="{% url 'kitchen:dish-detail' pk=dish.id %}" class="text-decoration-none text-dark">
-            <h3 class="lead fw-bold fs-4 mb-2">{{ dish.name }}</h3>
-            <p class="lead mb-0">{{ dish.description }}</p>
-          </a>
+  <div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom">Dishes: {{ cook.dishes.count }}</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      {% for dish in cook.dishes.all %}
+        <div class="col">
+          <div class="dish-card p-3 h-100 border rounded shadow-sm transition">
+            <a href="{% url 'kitchen:dish-detail' pk=dish.id %}" class="text-decoration-none text-dark">
+              <h3 class="lead fw-bold fs-4 mb-2">{{ dish.name }}</h3>
+              <p class="lead mb-0">{{ dish.description }}</p>
+            </a>
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</div>
 
 {% endblock %}

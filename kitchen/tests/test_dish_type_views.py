@@ -6,6 +6,7 @@ from kitchen.models import DishType
 
 DISH_TYPE_URL = reverse("kitchen:dish-types-list")
 
+
 class PublicDishTypeTest(TestCase):
     def test_login_required(self):
         res = self.client.get(DISH_TYPE_URL)

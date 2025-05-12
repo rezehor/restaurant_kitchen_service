@@ -1,11 +1,15 @@
-from django.contrib.auth import user_login_failed
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from kitchen.forms import CookCreationForm, DishCreationForm, DishSearchForm, IngredientSearchForm
+from kitchen.forms import (
+    CookCreationForm,
+    DishCreationForm,
+    DishSearchForm,
+    IngredientSearchForm
+)
 from kitchen.models import DishType, Dish, Cook, Ingredient
 
 
@@ -55,7 +59,7 @@ class DishListView(LoginRequiredMixin, generic.ListView):
     model = Dish
     paginate_by = 6
 
-    def get_context_data(self, *, object_list = None, **kwargs):
+    def get_context_data(self, *, object_list=None, **kwargs):
         context = super(DishListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
         context["search_form"] = DishSearchForm(
@@ -71,6 +75,7 @@ class DishListView(LoginRequiredMixin, generic.ListView):
                 name__icontains=form.cleaned_data["name"]
             )
         return queryset
+
 
 class DishDetailView(LoginRequiredMixin, generic.DetailView):
     model = Dish
@@ -97,7 +102,7 @@ class IngredientListView(LoginRequiredMixin, generic.ListView):
     model = Ingredient
     paginate_by = 10
 
-    def get_context_data(self, *, object_list = None, **kwargs):
+    def get_context_data(self, *, object_list=None, **kwargs):
         context = super(IngredientListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
         context["search_form"] = IngredientSearchForm(
@@ -150,8 +155,7 @@ class CookUpdateView(LoginRequiredMixin, generic.UpdateView):
     form_class = CookCreationForm
     success_url = reverse_lazy("kitchen:cook-list")
 
+
 class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Cook
     success_url = reverse_lazy("kitchen:cook-list")
-
-

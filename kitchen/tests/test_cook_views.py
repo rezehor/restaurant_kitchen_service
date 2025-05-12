@@ -4,6 +4,7 @@ from django.urls import reverse
 
 COOK_URL = reverse("kitchen:cook-list")
 
+
 class PublicCookTest(TestCase):
     def test_login_required(self):
         res = self.client.get(COOK_URL)
@@ -17,7 +18,6 @@ class PrivateCookTest(TestCase):
             password="test12345",
         )
         self.client.force_login(self.user)
-
 
     def test_create_cook(self):
         form_data = {
@@ -33,4 +33,7 @@ class PrivateCookTest(TestCase):
 
         self.assertEqual(new_user.first_name, form_data["first_name"])
         self.assertEqual(new_user.last_name, form_data["last_name"])
-        self.assertEqual(new_user.years_of_experience, form_data["years_of_experience"])
+        self.assertEqual(
+            new_user.years_of_experience,
+            form_data["years_of_experience"],
+        )

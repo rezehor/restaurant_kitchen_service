@@ -6,6 +6,7 @@ from kitchen.models import Ingredient
 
 INGREDIENT_URL = reverse("kitchen:ingredient-list")
 
+
 class PublicIngredientTest(TestCase):
     def test_login_required(self):
         res = self.client.get(INGREDIENT_URL)
