@@ -1,0 +1,1615 @@
+[
+{
+    "model": "kitchen.dishtype",
+    "pk": 1,
+    "fields": {
+        "name": "Appetizer"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 2,
+    "fields": {
+        "name": "Soup"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 3,
+    "fields": {
+        "name": "Salad"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 4,
+    "fields": {
+        "name": "Main Course"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 5,
+    "fields": {
+        "name": "Pasta"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 6,
+    "fields": {
+        "name": "Dessert"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 7,
+    "fields": {
+        "name": "Breakfast"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 8,
+    "fields": {
+        "name": "Grill"
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$placeholder",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chefjohn",
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-13T08:04:05.014Z",
+        "years_of_experience": 5,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$placeholder",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "annab",
+        "first_name": "Anna",
+        "last_name": "Baker",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-13T08:04:05.014Z",
+        "years_of_experience": 8,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$placeholder",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "marco",
+        "first_name": "Marco",
+        "last_name": "Rossi",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-13T08:04:05.015Z",
+        "years_of_experience": 12,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$placeholder",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "liwei",
+        "first_name": "Li",
+        "last_name": "Wei",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-13T08:04:05.015Z",
+        "years_of_experience": 6,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$aCqIBQqIGUFExqkjZqB5PJ$Ldr/QlpX7QursSod3VEVQlno+UHkZA5Dv5DwlYEnrSM=",
+        "last_login": "2025-05-13T08:17:00.193Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-05-13T08:16:38.546Z",
+        "years_of_experience": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 1,
+    "fields": {
+        "name": "Assorted"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 2,
+    "fields": {
+        "name": "Avocado"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 3,
+    "fields": {
+        "name": "Baked"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 4,
+    "fields": {
+        "name": "Balsamic"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 5,
+    "fields": {
+        "name": "Barbecue"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 6,
+    "fields": {
+        "name": "Basil"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 7,
+    "fields": {
+        "name": "Beans"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 8,
+    "fields": {
+        "name": "Beef"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 9,
+    "fields": {
+        "name": "Black"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 10,
+    "fields": {
+        "name": "Bread"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 11,
+    "fields": {
+        "name": "Breadcrumbs"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 12,
+    "fields": {
+        "name": "Breaded"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 13,
+    "fields": {
+        "name": "Breast"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 14,
+    "fields": {
+        "name": "Butter"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 15,
+    "fields": {
+        "name": "Caesar"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 16,
+    "fields": {
+        "name": "Cake"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 17,
+    "fields": {
+        "name": "Center"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 18,
+    "fields": {
+        "name": "Cheese"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 19,
+    "fields": {
+        "name": "Cheesecake"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 20,
+    "fields": {
+        "name": "Cherry"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 21,
+    "fields": {
+        "name": "Chicken"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 22,
+    "fields": {
+        "name": "Chocolate"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 23,
+    "fields": {
+        "name": "Classic"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 24,
+    "fields": {
+        "name": "Cocoa"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 25,
+    "fields": {
+        "name": "Coffee-soaked"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 26,
+    "fields": {
+        "name": "Comfort"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 27,
+    "fields": {
+        "name": "Corn"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 28,
+    "fields": {
+        "name": "Cracker"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 29,
+    "fields": {
+        "name": "Cream"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 30,
+    "fields": {
+        "name": "Creamy"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 31,
+    "fields": {
+        "name": "Croutons"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 32,
+    "fields": {
+        "name": "Crust"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 33,
+    "fields": {
+        "name": "Cucumbers"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 34,
+    "fields": {
+        "name": "Dressing"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 35,
+    "fields": {
+        "name": "Drizzled"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 36,
+    "fields": {
+        "name": "Eggs"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 37,
+    "fields": {
+        "name": "Feta"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 38,
+    "fields": {
+        "name": "Filled"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 39,
+    "fields": {
+        "name": "Fillet"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 40,
+    "fields": {
+        "name": "Flakes"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 41,
+    "fields": {
+        "name": "Fluffy"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 42,
+    "fields": {
+        "name": "Fresh"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 43,
+    "fields": {
+        "name": "Garlic"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 44,
+    "fields": {
+        "name": "Glaze"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 45,
+    "fields": {
+        "name": "Glazed"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 46,
+    "fields": {
+        "name": "Gooey"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 47,
+    "fields": {
+        "name": "Graham"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 48,
+    "fields": {
+        "name": "Green"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 49,
+    "fields": {
+        "name": "Grilled"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 50,
+    "fields": {
+        "name": "Herbs"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 51,
+    "fields": {
+        "name": "Hint"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 52,
+    "fields": {
+        "name": "Japanese"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 53,
+    "fields": {
+        "name": "Juice"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 54,
+    "fields": {
+        "name": "Juicy"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 55,
+    "fields": {
+        "name": "Ladyfingers"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 56,
+    "fields": {
+        "name": "Layered"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 57,
+    "fields": {
+        "name": "Layers"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 58,
+    "fields": {
+        "name": "Leaves"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 59,
+    "fields": {
+        "name": "Lemon"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 60,
+    "fields": {
+        "name": "Lemon-dill"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 61,
+    "fields": {
+        "name": "Lettuce"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 62,
+    "fields": {
+        "name": "Lime"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 63,
+    "fields": {
+        "name": "Maple"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 64,
+    "fields": {
+        "name": "Marinara"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 65,
+    "fields": {
+        "name": "Mascarpone"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 66,
+    "fields": {
+        "name": "Mashed"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 67,
+    "fields": {
+        "name": "Meat"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 68,
+    "fields": {
+        "name": "Mini"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 69,
+    "fields": {
+        "name": "Molten"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 70,
+    "fields": {
+        "name": "Mozzarella"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 71,
+    "fields": {
+        "name": "Mushroom"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 72,
+    "fields": {
+        "name": "Mushrooms"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 73,
+    "fields": {
+        "name": "Noodles"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 74,
+    "fields": {
+        "name": "Nutritious"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 75,
+    "fields": {
+        "name": "Olive"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 76,
+    "fields": {
+        "name": "Olives"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 77,
+    "fields": {
+        "name": "Omelette"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 78,
+    "fields": {
+        "name": "Onions"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 79,
+    "fields": {
+        "name": "Over"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 80,
+    "fields": {
+        "name": "Pancakes"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 81,
+    "fields": {
+        "name": "Pancetta"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 82,
+    "fields": {
+        "name": "Parmesan"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 83,
+    "fields": {
+        "name": "Pasta"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 84,
+    "fields": {
+        "name": "Penne"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 85,
+    "fields": {
+        "name": "Pepper"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 86,
+    "fields": {
+        "name": "Pork"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 87,
+    "fields": {
+        "name": "Quinoa"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 88,
+    "fields": {
+        "name": "Ribs"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 89,
+    "fields": {
+        "name": "Rich"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 90,
+    "fields": {
+        "name": "Ricotta"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 91,
+    "fields": {
+        "name": "Romaine"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 92,
+    "fields": {
+        "name": "Rubbed"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 93,
+    "fields": {
+        "name": "Salad"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 94,
+    "fields": {
+        "name": "Salmon"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 95,
+    "fields": {
+        "name": "Salt"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 96,
+    "fields": {
+        "name": "Sauce"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 97,
+    "fields": {
+        "name": "Seasoned"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 98,
+    "fields": {
+        "name": "Seaweed"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 99,
+    "fields": {
+        "name": "Served"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 100,
+    "fields": {
+        "name": "Sirloin"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 101,
+    "fields": {
+        "name": "Skewers"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 102,
+    "fields": {
+        "name": "Slices"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 103,
+    "fields": {
+        "name": "Slow-cooked"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 104,
+    "fields": {
+        "name": "Smoky"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 105,
+    "fields": {
+        "name": "Soup"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 106,
+    "fields": {
+        "name": "Spaghetti"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 107,
+    "fields": {
+        "name": "Spicy"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 108,
+    "fields": {
+        "name": "Spinach"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 109,
+    "fields": {
+        "name": "Steak"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 110,
+    "fields": {
+        "name": "Steamed"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 111,
+    "fields": {
+        "name": "Syrup"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 112,
+    "fields": {
+        "name": "Tender"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 113,
+    "fields": {
+        "name": "Three-egg"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 114,
+    "fields": {
+        "name": "Toasted"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 115,
+    "fields": {
+        "name": "Tofu"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 116,
+    "fields": {
+        "name": "Tomato"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 117,
+    "fields": {
+        "name": "Tomatoes"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 118,
+    "fields": {
+        "name": "Topped"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 119,
+    "fields": {
+        "name": "Tossed"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 120,
+    "fields": {
+        "name": "Traditional"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 121,
+    "fields": {
+        "name": "Vegetables"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 122,
+    "fields": {
+        "name": "Warm"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 123,
+    "fields": {
+        "name": "With"
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 1,
+    "fields": {
+        "name": "Bruschetta",
+        "description": "Grilled bread rubbed with garlic and topped with fresh tomatoes, olive oil, and basil.",
+        "price": "24.45",
+        "dish_type": 1,
+        "image_url": "https://az.przepisy.pl/www-przepisy-pl/www.przepisy.pl/przepisy3ii/img/variants/800x0/bruschetta-2.jpg",
+        "cooks": [
+            1,
+            3
+        ],
+        "ingredients": [
+            6,
+            10,
+            42,
+            43,
+            49,
+            75,
+            92,
+            117,
+            118,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 2,
+    "fields": {
+        "name": "Stuffed Mushrooms",
+        "description": "Mushrooms filled with herbs, garlic, breadcrumbs, and parmesan cheese.",
+        "price": "38.70",
+        "dish_type": 1,
+        "image_url": "https://www.allrecipes.com/thmb/aOv8k1w6rKS_T6ay2r44LC19IPk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/12751-Crab-Stuffed-Mushrooms-ddmfs-2x1-028-562b999380ba445e937e210292972bb1.jpg",
+        "cooks": [
+            1,
+            4
+        ],
+        "ingredients": [
+            11,
+            18,
+            38,
+            43,
+            50,
+            72,
+            82,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 3,
+    "fields": {
+        "name": "Caprese Skewers",
+        "description": "Mini skewers of mozzarella, cherry tomatoes, and basil leaves drizzled with balsamic glaze.",
+        "price": "26.13",
+        "dish_type": 1,
+        "image_url": "https://www.realsimple.com/thmb/1t12XJ_-OjI2DQScJTheqnTWqls=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/caprese-skewers-2000-a82a50b2f648441b94d75cabf6d73971.jpg",
+        "cooks": [
+            1,
+            2
+        ],
+        "ingredients": [
+            4,
+            6,
+            20,
+            35,
+            44,
+            58,
+            68,
+            70,
+            101,
+            117,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 4,
+    "fields": {
+        "name": "Tomato Basil Soup",
+        "description": "Creamy tomato soup with fresh basil and a hint of garlic.",
+        "price": "15.79",
+        "dish_type": 2,
+        "image_url": "https://s.lightorangebean.com/media/20240914150528/tomato-basil-soup_done.png",
+        "cooks": [
+            1,
+            4
+        ],
+        "ingredients": [
+            6,
+            30,
+            42,
+            43,
+            51,
+            105,
+            116,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 5,
+    "fields": {
+        "name": "Miso Soup",
+        "description": "Traditional Japanese soup with tofu, seaweed, and green onions.",
+        "price": "25.15",
+        "dish_type": 2,
+        "image_url": "https://www.crowdedkitchen.com/wp-content/uploads/2020/08/vegan-miso-soup.jpg",
+        "cooks": [
+            1,
+            3
+        ],
+        "ingredients": [
+            48,
+            52,
+            78,
+            98,
+            105,
+            115,
+            120,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 6,
+    "fields": {
+        "name": "Chicken Noodle Soup",
+        "description": "Classic comfort soup with chicken, egg noodles, and vegetables.",
+        "price": "24.30",
+        "dish_type": 2,
+        "image_url": "https://www.inspiredtaste.net/wp-content/uploads/2018/09/Easy-Chicken-Noodle-Soup-Recipe-1200.jpg",
+        "cooks": [
+            1,
+            2
+        ],
+        "ingredients": [
+            21,
+            23,
+            26,
+            73,
+            105,
+            121,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 7,
+    "fields": {
+        "name": "Caesar Salad",
+        "description": "Romaine lettuce tossed with Caesar dressing, croutons, and parmesan cheese.",
+        "price": "27.68",
+        "dish_type": 3,
+        "image_url": "https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw92573286/images/recipe-Images/classic-caesar-salad-recipe.jpg?sw=1200&sh=1200&sm=fit",
+        "cooks": [
+            2,
+            4
+        ],
+        "ingredients": [
+            15,
+            18,
+            31,
+            34,
+            61,
+            82,
+            91,
+            119,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 8,
+    "fields": {
+        "name": "Greek Salad",
+        "description": "Tomatoes, cucumbers, onions, olives, and feta cheese with olive oil.",
+        "price": "21.12",
+        "dish_type": 3,
+        "image_url": "https://hips.hearstapps.com/hmg-prod/images/greek-salad-index-642f292397bbf.jpg?crop=0.888888888888889xw:1xh;center",
+        "cooks": [
+            1,
+            4
+        ],
+        "ingredients": [
+            18,
+            33,
+            37,
+            75,
+            76,
+            78,
+            117,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 9,
+    "fields": {
+        "name": "Quinoa Salad",
+        "description": "Nutritious salad with quinoa, black beans, corn, and lime dressing.",
+        "price": "12.73",
+        "dish_type": 3,
+        "image_url": "https://www.allrecipes.com/thmb/AfZ5pJYvZSrlltkHiimLIOdEtjE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229156-Zesty-Quinoa-Salad-ddmps-4x3-104421-df647e343ce543769a038cccf4c6419c.jpg",
+        "cooks": [
+            2,
+            4
+        ],
+        "ingredients": [
+            7,
+            9,
+            27,
+            34,
+            62,
+            74,
+            87,
+            93,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 10,
+    "fields": {
+        "name": "Beef Stroganoff",
+        "description": "Tender beef slices in a creamy mushroom sauce served over noodles.",
+        "price": "18.64",
+        "dish_type": 4,
+        "image_url": "https://cookingwithcocktailrings.com/wp-content/uploads/2023/01/Beef-Stroganoff-over-Egg-Noodles-73.jpg",
+        "cooks": [
+            2,
+            3
+        ],
+        "ingredients": [
+            8,
+            30,
+            71,
+            73,
+            79,
+            96,
+            99,
+            102,
+            112
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 11,
+    "fields": {
+        "name": "Grilled Salmon",
+        "description": "Grilled salmon fillet with lemon-dill sauce and steamed vegetables.",
+        "price": "33.33",
+        "dish_type": 4,
+        "image_url": "https://www.billyparisi.com/wp-content/uploads/2023/08/grilled-salmon-1.jpg",
+        "cooks": [
+            1,
+            3
+        ],
+        "ingredients": [
+            39,
+            49,
+            60,
+            94,
+            96,
+            110,
+            121,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 12,
+    "fields": {
+        "name": "Chicken Parmesan",
+        "description": "Breaded chicken breast topped with marinara sauce and mozzarella cheese.",
+        "price": "39.41",
+        "dish_type": 4,
+        "image_url": "https://assets.bonappetit.com/photos/5ea8f0df16738800085ad5d2/1:1/w_2560%2Cc_limit/Chicken-Parmesean-Recipe-Lede.jpg",
+        "cooks": [
+            2,
+            3
+        ],
+        "ingredients": [
+            12,
+            13,
+            18,
+            21,
+            64,
+            70,
+            96,
+            118,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 13,
+    "fields": {
+        "name": "Spaghetti Carbonara",
+        "description": "Spaghetti tossed with eggs, parmesan, pancetta, and pepper.",
+        "price": "26.60",
+        "dish_type": 5,
+        "image_url": "https://d1gzhdl9p2j7j0.cloudfront.net/-/media/project/oneweb/kampl22/recipes/spaghetti-carbonara-2000x1125.jpg?rev=85023d04635940b6a51e22bad20796f6&vd=20250321T212609Z&extension=webp&hash=6E6C4B214FBD",
+        "cooks": [
+            1,
+            2
+        ],
+        "ingredients": [
+            36,
+            81,
+            82,
+            85,
+            106,
+            119,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 14,
+    "fields": {
+        "name": "Penne Arrabbiata",
+        "description": "Penne pasta in a spicy tomato garlic sauce.",
+        "price": "14.58",
+        "dish_type": 5,
+        "image_url": "https://az.przepisy.pl/www-przepisy-pl/www.przepisy.pl/przepisy3ii/img/variants/800x0/penne-arabiata672169.jpg",
+        "cooks": [
+            1,
+            4
+        ],
+        "ingredients": [
+            43,
+            83,
+            84,
+            96,
+            107,
+            116
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 15,
+    "fields": {
+        "name": "Lasagna",
+        "description": "Layers of pasta with ricotta, meat sauce, and mozzarella cheese.",
+        "price": "30.47",
+        "dish_type": 5,
+        "image_url": "https://newmansown.com/wp-content/uploads/2022/03/Homemade-lasagna-1200x675.png",
+        "cooks": [
+            1,
+            2
+        ],
+        "ingredients": [
+            18,
+            57,
+            67,
+            70,
+            83,
+            90,
+            96,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 16,
+    "fields": {
+        "name": "Tiramisu",
+        "description": "Coffee-soaked ladyfingers layered with mascarpone cream and cocoa.",
+        "price": "11.82",
+        "dish_type": 6,
+        "image_url": "https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/ccf61e4a9361f2ca74d2e20e9e1c6a2e/Derivates/d86fa890aae1ac234f2c79123296fd67407c71c7.jpg",
+        "cooks": [
+            2,
+            3
+        ],
+        "ingredients": [
+            24,
+            25,
+            29,
+            55,
+            56,
+            65,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 17,
+    "fields": {
+        "name": "Cheesecake",
+        "description": "Rich and creamy baked cheesecake with a graham cracker crust.",
+        "price": "16.78",
+        "dish_type": 6,
+        "image_url": "https://d1uz88p17r663j.cloudfront.net/original/dbcf216604cac743fdcdb7353528821f_nowojorski_sernik_(15).jpg",
+        "cooks": [
+            1,
+            3
+        ],
+        "ingredients": [
+            3,
+            19,
+            28,
+            30,
+            32,
+            47,
+            89,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 18,
+    "fields": {
+        "name": "Chocolate Lava Cake",
+        "description": "Warm chocolate cake with a gooey molten center.",
+        "price": "17.55",
+        "dish_type": 6,
+        "image_url": "https://images.getrecipekit.com/20250325120225-how-20to-20make-20chocolate-20molten-20lava-20cake-20in-20the-20microwave.png?width=650&quality=90&",
+        "cooks": [
+            1,
+            4
+        ],
+        "ingredients": [
+            16,
+            17,
+            22,
+            46,
+            69,
+            122,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 19,
+    "fields": {
+        "name": "Pancakes",
+        "description": "Fluffy pancakes served with butter and maple syrup.",
+        "price": "13.86",
+        "dish_type": 7,
+        "image_url": "https://na-talerzu.pl/wp-content/uploads/2024/03/Puszyste-czekoladowe-pancakes-7242.jpg",
+        "cooks": [
+            3,
+            4
+        ],
+        "ingredients": [
+            14,
+            41,
+            63,
+            80,
+            99,
+            111,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 20,
+    "fields": {
+        "name": "Omelette",
+        "description": "Three-egg omelette with cheese, tomatoes, and spinach.",
+        "price": "14.32",
+        "dish_type": 7,
+        "image_url": "https://www.healthyfood.com/wp-content/uploads/2018/02/Basic-omelette.jpg",
+        "cooks": [
+            2,
+            3
+        ],
+        "ingredients": [
+            18,
+            77,
+            108,
+            113,
+            117,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 21,
+    "fields": {
+        "name": "Avocado Toast",
+        "description": "Toasted bread topped with mashed avocado, lemon juice, and red pepper flakes.",
+        "price": "11.62",
+        "dish_type": 7,
+        "image_url": "https://www.jessicagavin.com/wp-content/uploads/2020/07/avocado-toast-20-1200.jpg",
+        "cooks": [
+            1,
+            3
+        ],
+        "ingredients": [
+            2,
+            10,
+            40,
+            53,
+            59,
+            66,
+            85,
+            114,
+            118,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 22,
+    "fields": {
+        "name": "BBQ Ribs",
+        "description": "Slow-cooked pork ribs glazed with smoky barbecue sauce.",
+        "price": "14.23",
+        "dish_type": 8,
+        "image_url": "https://assets-us-01.kc-usercontent.com/99c12d8c-2eee-0037-c331-48445a53ed20/63908251-ed70-4b32-9142-67f7a01228eb/Slow%20Cooked%20BBQ%20Ribs.jpg?w=1280&auto=format",
+        "cooks": [
+            2,
+            3
+        ],
+        "ingredients": [
+            5,
+            45,
+            86,
+            88,
+            96,
+            103,
+            104,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 23,
+    "fields": {
+        "name": "Grilled Vegetables",
+        "description": "Assorted vegetables grilled and seasoned with herbs and olive oil.",
+        "price": "12.12",
+        "dish_type": 8,
+        "image_url": "https://recipe30.com/wp-content/uploads/2023/04/BBQ-vegetables-848x477.jpg",
+        "cooks": [
+            1,
+            4
+        ],
+        "ingredients": [
+            1,
+            49,
+            50,
+            75,
+            97,
+            121,
+            123
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 24,
+    "fields": {
+        "name": "Steak",
+        "description": "Juicy grilled sirloin steak seasoned with salt and pepper.",
+        "price": "16.21",
+        "dish_type": 8,
+        "image_url": "https://cdn.jwplayer.com/v2/media/6Zj7e9p9/poster.jpg?width=1280",
+        "cooks": [
+            1,
+            4
+        ],
+        "ingredients": [
+            49,
+            54,
+            85,
+            95,
+            97,
+            100,
+            109,
+            123
+        ]
+    }
+}
+]
