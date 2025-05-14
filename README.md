@@ -51,7 +51,7 @@ Now, open http://127.0.0.1:8000/ in your browser to access the app
 
 ### Login
 
-![Login](login.png)
+![Login](Login.png)
 
 ### Dishes
 
