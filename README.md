@@ -4,7 +4,8 @@ Restaurant Kitchen Service is a web application for managing kitchen staff and d
 
 ## Live Demo
 
-The project is deployed on Render. You can access it here:  
+The project is deployed on Render. You can access it here:
+- https://kitchen-service-wxt3.onrender.com
 
 
 
