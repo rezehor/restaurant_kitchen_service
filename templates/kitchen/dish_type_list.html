@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Dish Types</title>{% endblock %}
+
+
+{% block content %}
+
+  <div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+      <h1 class="mb-0">Dish Types</h1>
+      <a href="{% url 'kitchen:dish-types-create' %}" class="btn btn-outline-dark btn-lg px-4">+ Create</a>
+    </div>
+    <div class="table-responsive modern-table">
+      <table class="table mb-0">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Dish Types</th>
+          <th>Dishes</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for dish_type in dish_type_list %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td><strong>{{ dish_type.name }}</strong></td>
+            <td>
+              {% for dish in dish_type.dishes.all %}
+                <a href="{% url 'kitchen:dish-detail' pk=dish.id %}"><span class="badge">{{ dish.name }}</span></a>
+              {% empty %}
+                <em>No dishes</em>
+              {% endfor %}
+            </td>
+            <td><a href="{% url 'kitchen:dish-types-update' pk=dish_type.id %}"
+                   class="btn btn-outline-secondary btn-sm px-4">Update</a></td>
+            <td><a href="{% url 'kitchen:dish-types-delete' pk=dish_type.id %}"
+                   class="btn btn-outline-danger btn-sm px-4">Delete</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}

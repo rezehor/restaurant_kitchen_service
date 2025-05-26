@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Cooks</title>{% endblock %}
+
+
+{% block content %}
+  <div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+      <h1 class="mb-0">Cooks</h1>
+      <a href="{% url 'kitchen:cook-create' %}" class="btn btn-outline-dark btn-lg px-4">+ Create</a>
+    </div>
+    <div class="table-responsive modern-table">
+      <table class="table mb-0">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>Username</th>
+          <th>Name</th>
+          <th>Last name</th>
+          <th>Years of experience</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cook in cook_list %}
+          {% if "admin" not in cook.username %}
+            <tr>
+              <td>{{ cook.id }}</td>
+              <td><a href="{% url 'kitchen:cook-detail' pk=cook.id %}" rel="{{ cook.id }}">{{ cook.username }}</a></td>
+              <td>{{ cook.first_name }}</td>
+              <td>{{ cook.last_name }}</td>
+              <td>{{ cook.years_of_experience }}</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
